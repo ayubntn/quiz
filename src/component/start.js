@@ -1,15 +1,26 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import {useHistory} from 'react-router-dom';
 
-class Start extends React.Component {
-	render() {
-		return (
-			<section>
-				<h1>しんかんせんクイズ</h1>
-				<Link to="/shinkansen1">スタート</Link>
-			</section>
-		);
+function Start(props) {
+	const history = useHistory();
+
+	function handleLink(path) {
+		props.resetAnswers();
+		history.push(path);
 	}
+	return (
+		<section>
+			<h1>クイズにちょうせん！</h1>
+			<button onClick={() => {
+				handleLink("/shinkansen/1")
+			}}>しんかんせん
+			</button>
+			<button onClick={() => {
+				handleLink("/dinosaur/1")
+			}}>きょうりゅう
+			</button>
+		</section>
+	);
 }
 
 export default Start;
