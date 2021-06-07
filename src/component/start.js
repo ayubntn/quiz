@@ -1,5 +1,6 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
+import styles from '../css/button.module.scss';
 
 function Start(props) {
 	const history = useHistory();
@@ -11,7 +12,7 @@ function Start(props) {
 	return (
 		<section>
 			<h1>クイズにちょうせん！</h1>
-			<button onClick={() => {
+			<button className={styles.red} onClick={() => {
 				handleLink("/shinkansen/1")
 			}}>しんかんせん
 			</button>
