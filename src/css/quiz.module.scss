@@ -1,0 +1,38 @@
+@import "variables";
+
+.section {
+	width: 90%;
+	margin: auto;
+	padding-top: 30px;
+}
+
+.title {
+	text-align: center;
+	font-weight: 700;
+}
+
+.title2 {
+	margin-top: 10px;
+	text-align: center;
+	font-weight: 700;
+	font-size: 30px;
+}
+
+.question {
+	margin-top: 30px;
+	line-height: 1.6;
+}
+
+.options {
+	margin-top: 30px;
+}
+
+.optionItem {
+	margin-top: 20px;
+	label {
+		display: block;
+		background-color: #eee;
+		padding: 20px 30px;
+		border-radius: 10px;
+	}
+}

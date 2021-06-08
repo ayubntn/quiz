@@ -1,0 +1,21 @@
+@import "variables";
+
+.title {
+	font-size: 30px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.btn {
+	display: inline-block;
+	background-color: #eee;
+	line-height: 48px;
+	border-radius: 48px;
+	padding: 0 40px;
+	text-align: center;
+}
+
+.quizList {
+	max-width: $contentWidth;
+	margin: auto;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import title from '../data/title';
+import styles from '../css/result.module.scss';
 
 class Result extends React.Component {
 
@@ -15,17 +16,21 @@ class Result extends React.Component {
 		const name = title[this.props.type];
 		let special;
 		if (score === this.props.data.length) {
-			special = <p>きみは {name}はかせ だ！</p>;
+			special = <p className={styles.special}>きみは {name}はかせ だ！</p>;
 		} else {
-			special = <p>また あそんでね</p>;
+			special = <p className={styles.special}>また あそんでね</p>;
 		}
 		return (
-			<div>
-				<p>{name}クイズ</p>
-				<h2>けっか</h2>
-				<p>{this.props.data.length}もんちゅう{score}もん せいかい</p>
+			<div className={styles.result}>
+				<h1 className={styles.title}>{name}クイズ</h1>
+				<h2 className={styles.title2}>けっか</h2>
+				<p className={styles.text}>
+					<strong className={styles.number}>{this.props.data.length}</strong>もんちゅう<br/>
+					<strong className={styles.number}>{score}</strong>もん せいかい</p>
 				{special}
-				<Link to="/quiz">もどる</Link>
+				<div className={styles.back}>
+					<Link className="btn" to="/quiz">もどる</Link>
+				</div>
 			</div>
 		)
 	}

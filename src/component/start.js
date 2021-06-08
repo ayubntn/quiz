@@ -1,6 +1,8 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
-import styles from '../css/button.module.scss';
+import styles from '../css/start.module.scss';
+import shinkansenIcon from '../image/icon_shinkansen.svg';
+import fossilIcon from '../image/icon_fossil.svg';
 
 function Start(props) {
 	const history = useHistory();
@@ -9,17 +11,20 @@ function Start(props) {
 		props.resetAnswers();
 		history.push(path);
 	}
+
 	return (
-		<section>
-			<h1>クイズにちょうせん！</h1>
-			<button className={styles.red} onClick={() => {
-				handleLink("/shinkansen/1")
-			}}>しんかんせん
-			</button>
-			<button onClick={() => {
-				handleLink("/dinosaur/1")
-			}}>きょうりゅう
-			</button>
+		<section className={styles.section}>
+			<h1 className={'title'}>クイズにちょうせん！</h1>
+			<div className={styles.btnGroup}>
+				<button onClick={() => {
+					handleLink("/shinkansen/1")
+				}}><img src={shinkansenIcon} className={styles.btnIcon}/>しんかんせん
+				</button>
+				<button onClick={() => {
+					handleLink("/dinosaur/1")
+				}}><img src={fossilIcon} className={styles.btnIcon}/>きょうりゅう
+				</button>
+			</div>
 		</section>
 	);
 }

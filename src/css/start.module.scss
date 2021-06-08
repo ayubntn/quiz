@@ -1,0 +1,30 @@
+.section {
+	margin-top: 40px;
+}
+
+.btnGroup {
+	margin-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 30px;
+		width: 80%;
+		background-color: #eee;
+		font-size: 24px;
+		font-weight: 700;
+		height: 86px;
+		border-radius: 20px;
+		border: 6px solid #666;
+	}
+}
+
+.btnIcon {
+	width: 50px;
+	height: 50px;
+	margin-right: 20px;
+}

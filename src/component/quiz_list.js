@@ -13,7 +13,7 @@ class QuizList extends React.Component {
 		super(props);
 		this.state = {
 			shinkansenAnswers: Array(shinkansenData.length).fill(null),
-			dinosaurAnswers: Array(shinkansenData.length).fill(null),
+			dinosaurAnswers: Array(dinosaurData.length).fill(null),
 		};
 	}
 
@@ -36,14 +36,14 @@ class QuizList extends React.Component {
 	resetAnswers() {
 		this.setState({
 			shinkansenAnswers: Array(shinkansenData.length).fill(null),
-			dinosaurAnswers: Array(shinkansenData.length).fill(null),
+			dinosaurAnswers: Array(dinosaurData.length).fill(null),
 		});
 	}
 
 	render() {
 
 		return (
-			<div>
+			<div className={'quizList'}>
 				<Router>
 					<div>
 						<Switch>

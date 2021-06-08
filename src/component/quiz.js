@@ -1,6 +1,7 @@
 import React from 'react';
 import Answer from "./answer";
 import title from '../data/title';
+import styles from '../css/quiz.module.scss';
 
 class Quiz extends React.Component {
 	render() {
@@ -10,7 +11,7 @@ class Quiz extends React.Component {
 		}
 		let options = this.props.data.options.map((value, i) => {
 			return (
-				<li key={i}>
+				<li className={styles.optionItem} key={i}>
 					<label>
 						<input type="radio" name="quiz" value={i}
 							   onChange={() => this.props.onChange(i)}
@@ -22,11 +23,11 @@ class Quiz extends React.Component {
 			);
 		});
 		return (
-			<section>
-				<p>{title[this.props.type]}クイズ</p>
-				<h2>だい{this.props.number}もん</h2>
-				<p>{this.props.data.question}</p>
-				<ul>
+			<section className={styles.section}>
+				<h1 className={styles.title}>{title[this.props.type]}クイズ</h1>
+				<h2 className={styles.title2}>だい{this.props.number}もん</h2>
+				<p className={styles.question}>{this.props.data.question}</p>
+				<ul className={styles.options}>
 					{options}
 				</ul>
 				{answer}
