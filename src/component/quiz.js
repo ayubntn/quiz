@@ -1,7 +1,7 @@
 import React from 'react';
 import Answer from "./answer";
 import title from '../data/title';
-import styles from '../css/quiz.module.scss';
+import styles from '../css/module/quiz.module.scss';
 
 class Quiz extends React.Component {
 	render() {

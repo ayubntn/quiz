@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import Quiz from './quiz';
-import styles from '../css/layout.module.scss';
+import styles from '../css/module/layout.module.scss';
 
 class Layout extends React.Component {
 
@@ -21,10 +21,10 @@ class Layout extends React.Component {
 		let nextBtn;
 		if (currentNumber === this.props.data.length) {
 			nextLink = <Link to={'/' + this.props.type + '/result'}>けっか</Link>;
-			nextBtn = <Link className="btn" to={'/' + this.props.type + '/result'}>けっか</Link>;
+			nextBtn = <Link className={styles.btn} to={'/' + this.props.type + '/result'}>けっか</Link>;
 		} else {
 			nextLink = <Link to={'/' + this.props.type + '/' + (currentNumber + 1)}>つぎ</Link>;
-			nextBtn = <Link className="btn" to={'/' + this.props.type + '/' + (currentNumber + 1)}>つぎ</Link>;
+			nextBtn = <Link className={styles.btn} to={'/' + this.props.type + '/' + (currentNumber + 1)}>つぎ</Link>;
 		}
 
 		const answeredCount = this.props.answers.filter(value => value != null).length;

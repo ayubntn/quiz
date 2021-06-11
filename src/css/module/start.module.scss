@@ -1,5 +1,11 @@
+@import "../global";
+
 .section {
 	margin-top: 40px;
+}
+
+.title {
+	@include pageTitle;
 }
 
 .btnGroup {

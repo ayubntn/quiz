@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import title from '../data/title';
-import styles from '../css/result.module.scss';
+import styles from '../css/module/result.module.scss';
 
 class Result extends React.Component {
 
@@ -28,9 +28,9 @@ class Result extends React.Component {
 					<strong className={styles.number}>{this.props.data.length}</strong>もんちゅう<br/>
 					<strong className={styles.number}>{score}</strong>もん せいかい</p>
 				{special}
-				<div className={styles.back}>
-					<Link className="btn" to="/quiz">もどる</Link>
-				</div>
+
+				<Link className={styles.back} to="/quiz">もどる</Link>
+
 			</div>
 		)
 	}

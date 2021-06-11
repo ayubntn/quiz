@@ -1,4 +1,4 @@
-@import "variables";
+@import "../global";
 
 .section {
 	width: 90%;
@@ -7,15 +7,12 @@
 }
 
 .title {
-	text-align: center;
-	font-weight: 700;
+	@include subTitle;
 }
 
 .title2 {
 	margin-top: 10px;
-	text-align: center;
-	font-weight: 700;
-	font-size: 30px;
+	@include pageTitle;
 }
 
 .question {

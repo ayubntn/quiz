@@ -1,6 +1,6 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
-import styles from '../css/start.module.scss';
+import styles from '../css/module/start.module.scss';
 import shinkansenIcon from '../image/icon_shinkansen.svg';
 import fossilIcon from '../image/icon_fossil.svg';
 
@@ -14,7 +14,7 @@ function Start(props) {
 
 	return (
 		<section className={styles.section}>
-			<h1 className={'title'}>クイズにちょうせん！</h1>
+			<h1 className={styles.title}>クイズにちょうせん！</h1>
 			<div className={styles.btnGroup}>
 				<button onClick={() => {
 					handleLink("/shinkansen/1")

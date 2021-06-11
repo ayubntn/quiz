@@ -1,4 +1,4 @@
-@import "variables";
+@import "../global";
 
 .layout {
 	margin-bottom: 100px;
@@ -74,4 +74,8 @@ progress {
 .nextBtn {
 	margin-top: 30px;
 	text-align: center;
+}
+
+.btn {
+	@include btn;
 }
