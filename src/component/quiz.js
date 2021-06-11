@@ -12,7 +12,7 @@ class Quiz extends React.Component {
 		let options = this.props.data.options.map((value, i) => {
 			return (
 				<li className={styles.optionItem} key={i}>
-					<label>
+					<label className={`${styles.label} ${this.props.answer === i ? styles.checkedLabel : null}`}>
 						<input type="radio" name="quiz" value={i}
 							   onChange={() => this.props.onChange(i)}
 							   checked={this.props.answer === i}

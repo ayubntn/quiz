@@ -23,3 +23,24 @@
 	margin-top: 20px;
 	line-height: 1.6;
 }
+
+.maru {
+	margin-right: 10px;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border: 8px solid;
+	border-radius: 50%;
+	vertical-align: bottom;
+}
+
+.batsu {
+	margin-right: 10px;
+	vertical-align: text-bottom;
+
+	&::before {
+		content: '\f00d';
+		@include fontAwesome;
+		font-size: 40px;
+	}
+}
