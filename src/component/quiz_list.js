@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Layout from "./layout";
 import Start from "./start";
@@ -7,89 +7,75 @@ import Result from "./result";
 import shinkansenData from "../data/shinkansen";
 import dinosaurData from "../data/dinosaur";
 
-class QuizList extends React.Component {
+function QuizList(props) {
 
-	constructor(props) {
-		super(props);
-		this.state = {
-			shinkansenAnswers: Array(shinkansenData.length).fill(null),
-			dinosaurAnswers: Array(dinosaurData.length).fill(null),
-		};
-	}
+	const [shinkansenAnswers, setShinkansenAnswers] = useState(Array(shinkansenData.length).fill(null));
+	const [dinosaurAnswers, setDinosaurAnswers] = useState(Array(dinosaurData.length).fill(null));
 
-	handleChangeShinkansen(quizIndex, answer) {
-		let answers = this.state.shinkansenAnswers.slice();
+	const handleChangeShinkansen = (quizIndex, answer) => {
+		let answers = shinkansenAnswers.slice();
 		answers[quizIndex] = answer;
-		this.setState({
-			shinkansenAnswers: answers,
-		})
-	}
+		setShinkansenAnswers(answers);
+	};
 
-	handleChangeDinosaur(quizIndex, answer) {
-		let answers = this.state.dinosaurAnswers.slice();
+	const handleChangeDinosaur = (quizIndex, answer) => {
+		let answers = dinosaurAnswers.slice();
 		answers[quizIndex] = answer;
-		this.setState({
-			dinosaurAnswers: answers,
-		})
-	}
+		setDinosaurAnswers(answers);
+	};
 
-	resetAnswers() {
-		this.setState({
-			shinkansenAnswers: Array(shinkansenData.length).fill(null),
-			dinosaurAnswers: Array(dinosaurData.length).fill(null),
-		});
-	}
+	const resetAnswers = () => {
+		setShinkansenAnswers(Array(shinkansenData.length).fill(null));
+		setDinosaurAnswers(Array(dinosaurData.length).fill(null));
+	};
 
-	render() {
-
-		return (
-			<div className={'quizList'}>
-				<Router>
-					<div>
-						<Switch>
-							<Route path='/quiz' render={() =>
-								<Start resetAnswers={() => this.resetAnswers()}/>
-							}/>
-							<Route path='/shinkansen/result'
-								   render={() => <Result
-									   type={'shinkansen'}
-									   data={shinkansenData}
-									   answers={this.state.shinkansenAnswers}
-								   />}
-							/>
-							<Route
-								path="/shinkansen/:id"
-								render={({location, match}) => <Layout
-									type={'shinkansen'}
-									match={match}
-									data={shinkansenData}
-									answers={this.state.shinkansenAnswers}
-									onChange={(quizIndex, answer) => this.handleChangeShinkansen(quizIndex, answer)}
-								/>}
-							/>
-							<Route path='/dinosaur/result'
-								   render={() => <Result
-									   type={'dinosaur'}
-									   data={dinosaurData}
-									   answers={this.state.dinosaurAnswers}
-								   />}
-							/>
-							<Route
-								path="/dinosaur/:id"
-								render={({location, match}) => <Layout
-									type={'dinosaur'}
-									match={match}
-									data={dinosaurData}
-									answers={this.state.dinosaurAnswers}
-									onChange={(quizIndex, answer) => this.handleChangeDinosaur(quizIndex, answer)}
-								/>}
-							/>
-						</Switch>
-					</div>
-				</Router>
-			</div>
-		);
-	}
+	return (
+		<div className={'quizList'}>
+			<Router>
+				<div>
+					<Switch>
+						<Route path='/quiz' render={() =>
+							<Start resetAnswers={() => resetAnswers()}/>
+						}/>
+						<Route path='/shinkansen/result'
+							   render={() => <Result
+								   type={'shinkansen'}
+								   data={shinkansenData}
+								   answers={shinkansenAnswers}
+							   />}
+						/>
+						<Route
+							path="/shinkansen/:id"
+							render={({location, match}) => <Layout
+								type={'shinkansen'}
+								match={match}
+								data={shinkansenData}
+								answers={shinkansenAnswers}
+								onChange={(quizIndex, answer) => handleChangeShinkansen(quizIndex, answer)}
+							/>}
+						/>
+						<Route path='/dinosaur/result'
+							   render={() => <Result
+								   type={'dinosaur'}
+								   data={dinosaurData}
+								   answers={dinosaurAnswers}
+							   />}
+						/>
+						<Route
+							path="/dinosaur/:id"
+							render={({location, match}) => <Layout
+								type={'dinosaur'}
+								match={match}
+								data={dinosaurData}
+								answers={dinosaurAnswers}
+								onChange={(quizIndex, answer) => handleChangeDinosaur(quizIndex, answer)}
+							/>}
+						/>
+					</Switch>
+				</div>
+			</Router>
+		</div>
+	);
 }
 
 export default QuizList;

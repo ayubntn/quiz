@@ -29,6 +29,6 @@ const data = [
 		rightAnswerIdx: 2,
 		description: 'じりょくで ういたまま はしるよ。'
 	},
-	];
+];
 
 export default data;
