@@ -58,6 +58,7 @@ progress {
 	&::-webkit-progress-value {
 		border-radius: $radius;
 		background-color: $bar;
+		transition: all .3s;
 	}
 
 	&::-moz-progress-bar {
@@ -78,4 +79,22 @@ progress {
 
 .btn {
 	@include btn;
+}
+
+.headerHome {
+	i {
+		margin-right: 5px;
+	}
+}
+
+.headerBefore {
+	i {
+		margin-right: 5px;
+	}
+}
+
+.headerNext {
+	i {
+		margin-left: 5px;
+	}
 }
