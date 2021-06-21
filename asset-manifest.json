@@ -1,23 +1,27 @@
 {
   "files": {
-    "main.css": "/quiz/static/css/main.80cd0cce.chunk.css",
-    "main.js": "/quiz/static/js/main.27f5b526.chunk.js",
-    "main.js.map": "/quiz/static/js/main.27f5b526.chunk.js.map",
+    "main.css": "/quiz/static/css/main.b5e8c205.chunk.css",
+    "main.js": "/quiz/static/js/main.f0e732d3.chunk.js",
+    "main.js.map": "/quiz/static/js/main.f0e732d3.chunk.js.map",
     "runtime-main.js": "/quiz/static/js/runtime-main.8deba0c1.js",
     "runtime-main.js.map": "/quiz/static/js/runtime-main.8deba0c1.js.map",
-    "static/js/2.b1697d6c.chunk.js": "/quiz/static/js/2.b1697d6c.chunk.js",
-    "static/js/2.b1697d6c.chunk.js.map": "/quiz/static/js/2.b1697d6c.chunk.js.map",
+    "static/js/2.ad0203c9.chunk.js": "/quiz/static/js/2.ad0203c9.chunk.js",
+    "static/js/2.ad0203c9.chunk.js.map": "/quiz/static/js/2.ad0203c9.chunk.js.map",
     "index.html": "/quiz/index.html",
-    "static/css/main.80cd0cce.chunk.css.map": "/quiz/static/css/main.80cd0cce.chunk.css.map",
-    "static/js/2.b1697d6c.chunk.js.LICENSE.txt": "/quiz/static/js/2.b1697d6c.chunk.js.LICENSE.txt",
+    "static/css/main.b5e8c205.chunk.css.map": "/quiz/static/css/main.b5e8c205.chunk.css.map",
+    "static/js/2.ad0203c9.chunk.js.LICENSE.txt": "/quiz/static/js/2.ad0203c9.chunk.js.LICENSE.txt",
     "static/media/style.scss": "/quiz/static/media/MPLUS1p-Medium.f77aa296.ttf",
     "static/media/icon_fossil.da41e145.svg": "/quiz/static/media/icon_fossil.da41e145.svg",
-    "static/media/icon_shinkansen.5d9b5e21.svg": "/quiz/static/media/icon_shinkansen.5d9b5e21.svg"
+    "static/media/icon_shinkansen.5d9b5e21.svg": "/quiz/static/media/icon_shinkansen.5d9b5e21.svg",
+    "static/media/result_congrats.8d258f86.png": "/quiz/static/media/result_congrats.8d258f86.png",
+    "static/media/result_donmai.c7cfa7b8.png": "/quiz/static/media/result_donmai.c7cfa7b8.png",
+    "static/media/result_great.71ccdb5a.png": "/quiz/static/media/result_great.71ccdb5a.png",
+    "static/media/result_your_best.94a449a5.png": "/quiz/static/media/result_your_best.94a449a5.png"
   },
   "entrypoints": [
     "static/js/runtime-main.8deba0c1.js",
-    "static/js/2.b1697d6c.chunk.js",
-    "static/css/main.80cd0cce.chunk.css",
-    "static/js/main.27f5b526.chunk.js"
+    "static/js/2.ad0203c9.chunk.js",
+    "static/css/main.b5e8c205.chunk.css",
+    "static/js/main.f0e732d3.chunk.js"
   ]
 }
