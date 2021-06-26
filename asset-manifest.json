@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/quiz/static/css/main.b5e8c205.chunk.css",
-    "main.js": "/quiz/static/js/main.f0e732d3.chunk.js",
-    "main.js.map": "/quiz/static/js/main.f0e732d3.chunk.js.map",
+    "main.css": "/quiz/static/css/main.c5207295.chunk.css",
+    "main.js": "/quiz/static/js/main.ad1aed9c.chunk.js",
+    "main.js.map": "/quiz/static/js/main.ad1aed9c.chunk.js.map",
     "runtime-main.js": "/quiz/static/js/runtime-main.8deba0c1.js",
     "runtime-main.js.map": "/quiz/static/js/runtime-main.8deba0c1.js.map",
-    "static/js/2.ad0203c9.chunk.js": "/quiz/static/js/2.ad0203c9.chunk.js",
-    "static/js/2.ad0203c9.chunk.js.map": "/quiz/static/js/2.ad0203c9.chunk.js.map",
+    "static/js/2.8702c14e.chunk.js": "/quiz/static/js/2.8702c14e.chunk.js",
+    "static/js/2.8702c14e.chunk.js.map": "/quiz/static/js/2.8702c14e.chunk.js.map",
     "index.html": "/quiz/index.html",
-    "static/css/main.b5e8c205.chunk.css.map": "/quiz/static/css/main.b5e8c205.chunk.css.map",
-    "static/js/2.ad0203c9.chunk.js.LICENSE.txt": "/quiz/static/js/2.ad0203c9.chunk.js.LICENSE.txt",
+    "static/css/main.c5207295.chunk.css.map": "/quiz/static/css/main.c5207295.chunk.css.map",
+    "static/js/2.8702c14e.chunk.js.LICENSE.txt": "/quiz/static/js/2.8702c14e.chunk.js.LICENSE.txt",
     "static/media/style.scss": "/quiz/static/media/MPLUS1p-Medium.f77aa296.ttf",
-    "static/media/icon_fossil.da41e145.svg": "/quiz/static/media/icon_fossil.da41e145.svg",
-    "static/media/icon_shinkansen.5d9b5e21.svg": "/quiz/static/media/icon_shinkansen.5d9b5e21.svg",
+    "static/media/icon_fossil.04456dd0.svg": "/quiz/static/media/icon_fossil.04456dd0.svg",
+    "static/media/icon_shinkansen.e0eabdab.svg": "/quiz/static/media/icon_shinkansen.e0eabdab.svg",
     "static/media/result_congrats.8d258f86.png": "/quiz/static/media/result_congrats.8d258f86.png",
     "static/media/result_donmai.c7cfa7b8.png": "/quiz/static/media/result_donmai.c7cfa7b8.png",
     "static/media/result_great.71ccdb5a.png": "/quiz/static/media/result_great.71ccdb5a.png",
@@ -20,8 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.8deba0c1.js",
-    "static/js/2.ad0203c9.chunk.js",
-    "static/css/main.b5e8c205.chunk.css",
-    "static/js/main.f0e732d3.chunk.js"
+    "static/js/2.8702c14e.chunk.js",
+    "static/css/main.c5207295.chunk.css",
+    "static/js/main.ad1aed9c.chunk.js"
   ]
 }
