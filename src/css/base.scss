@@ -1,26 +1,21 @@
 @font-face {
-	font-family: 'mplus-1p';
-	src: url('../font/MPLUS1p-Medium.ttf') format('truetype');
+	font-family: "mplus-1p";
+	src: url("../font/MPLUS1p-Medium.ttf") format("truetype");
 	font-weight: 500;
 }
 
 @font-face {
-	font-family: 'mplus-1p';
-	src: url('../font/MPLUS1p-Black.ttf') format('truetype');
+	font-family: "mplus-1p";
+	src: url("../font/MPLUS1p-Black.ttf") format("truetype");
 	font-weight: 700;
 }
 
 body {
-	font-family: 'mplus-1p', sans-serif;
+	font-family: "mplus-1p", sans-serif;
 	font-weight: 500;
 	font-size: 20px;
 }
 
 * {
 	box-sizing: border-box;
-}
-
-.quizList {
-	max-width: $contentWidth;
-	margin: auto;
 }
