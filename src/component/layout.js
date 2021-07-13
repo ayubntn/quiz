@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Quiz from "./quiz";
 import { css } from "@emotion/react";
 import * as globalStyle from "../global_style";
@@ -43,9 +43,9 @@ function Layout(props) {
 			margin-left: 5px;
 		}
 	`;
-	const { params } = props.match;
-	const currentNumber = Number(params.id);
-	const index = Number(params.id) - 1;
+	let { id } = useParams();
+	const currentNumber = Number(id);
+	const index = Number(id) - 1;
 
 	let beforeLink;
 	if (currentNumber === 1) {

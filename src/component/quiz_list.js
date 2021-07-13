@@ -63,10 +63,9 @@ function QuizList(props) {
 						/>
 						<Route
 							path="/shinkansen/:id"
-							render={({ location, match }) => (
+							render={() => (
 								<Layout
 									type={"shinkansen"}
-									match={match}
 									data={shinkansenData}
 									answers={shinkansenAnswers}
 									onChange={(quizIndex, answer) =>
@@ -90,10 +89,9 @@ function QuizList(props) {
 						/>
 						<Route
 							path="/dinosaur/:id"
-							render={({ location, match }) => (
+							render={() => (
 								<Layout
 									type={"dinosaur"}
-									match={match}
 									data={dinosaurData}
 									answers={dinosaurAnswers}
 									onChange={(quizIndex, answer) =>
