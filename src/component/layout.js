@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import React, { useEffect } from "react";
+import React from "react";
 import { Link, useParams } from "react-router-dom";
 import Quiz from "./quiz";
 import { css } from "@emotion/react";
@@ -50,7 +50,7 @@ function Layout(props) {
 	let beforeLink;
 	if (currentNumber === 1) {
 		beforeLink = (
-			<Link to="/quiz" css={headerHomeStyle}>
+			<Link to="/" css={headerHomeStyle}>
 				<i className="fas fa-home" />
 				さいしょ
 			</Link>

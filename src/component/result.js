@@ -91,7 +91,7 @@ function Result(props) {
 			<div css={resultImageStyle}>
 				<img src={rankImages[rank]} />
 			</div>
-			<Link css={backStyle} to="/quiz">
+			<Link css={backStyle} to="/">
 				もどる
 			</Link>
 		</div>

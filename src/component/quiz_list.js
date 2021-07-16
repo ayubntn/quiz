@@ -35,6 +35,21 @@ function QuizList(props) {
 		setDinosaurAnswers(answers);
 	};
 
+	const quizHash = {
+		data: {
+			shinkansen: shinkansenData,
+			dinosaur: dinosaurData,
+		},
+		answer: {
+			shinkansen: shinkansenAnswers,
+			dinosaur: dinosaurAnswers,
+		},
+		handler: {
+			shinkansen: handleChangeShinkansen,
+			dinosaur: handleChangeDinosaur,
+		},
+	};
+
 	const resetAnswers = () => {
 		setShinkansenAnswers(Array(shinkansenData.length).fill(null));
 		setDinosaurAnswers(Array(dinosaurData.length).fill(null));
@@ -42,64 +57,58 @@ function QuizList(props) {
 
 	return (
 		<div css={wrapperStyle}>
-			<Router>
+			<Router basename="/quiz">
 				<div>
 					<Switch>
-						<Route
-							path="/quiz"
-							render={() => (
-								<Start resetAnswers={() => resetAnswers()} />
-							)}
-						/>
-						<Route
-							path="/shinkansen/result"
-							render={() => (
-								<Result
-									type={"shinkansen"}
-									data={shinkansenData}
-									answers={shinkansenAnswers}
-								/>
-							)}
-						/>
-						<Route
-							path="/shinkansen/:id"
-							render={() => (
-								<Layout
-									type={"shinkansen"}
-									data={shinkansenData}
-									answers={shinkansenAnswers}
-									onChange={(quizIndex, answer) =>
-										handleChangeShinkansen(
-											quizIndex,
-											answer
-										)
-									}
-								/>
-							)}
-						/>
-						<Route
-							path="/dinosaur/result"
-							render={() => (
-								<Result
-									type={"dinosaur"}
-									data={dinosaurData}
-									answers={dinosaurAnswers}
-								/>
-							)}
-						/>
-						<Route
-							path="/dinosaur/:id"
-							render={() => (
-								<Layout
-									type={"dinosaur"}
-									data={dinosaurData}
-									answers={dinosaurAnswers}
-									onChange={(quizIndex, answer) =>
-										handleChangeDinosaur(quizIndex, answer)
-									}
-								/>
-							)}
-						/>
+						<Route exact path="/">
+							<Start resetAnswers={() => resetAnswers()} />
+						</Route>
+
+						<Route path="/shinkansen/result">
+							<Result
+								type="shinkansen"
+								data={quizHash.data["shinkansen"]}
+								answers={quizHash.answer["shinkansen"]}
+							/>
+						</Route>
+						<Route path="/shinkansen/:id">
+							<Layout
+								type="shinkansen"
+								data={quizHash.data["shinkansen"]}
+								answers={quizHash.answer["shinkansen"]}
+								onChange={(quizIndex, answer) =>
+									quizHash.handler["shinkansen"](
+										quizIndex,
+										answer
+									)
+								}
+							/>
+						</Route>
+
+						<Route path="/dinosaur/result">
+							<Result
+								type="dinosaur"
+								data={quizHash.data["dinosaur"]}
+								answers={quizHash.answer["dinosaur"]}
+							/>
+						</Route>
+						<Route path="/dinosaur/:id">
+							<Layout
+								type="dinosaur"
+								data={quizHash.data["dinosaur"]}
+								answers={quizHash.answer["dinosaur"]}
+								onChange={(quizIndex, answer) =>
+									quizHash.handler["dinosaur"](
+										quizIndex,
+										answer
+									)
+								}
+							/>
+						</Route>
+
+						<Route path="*">
+							<Start resetAnswers={() => resetAnswers()} />
+						</Route>
 					</Switch>
 				</div>
 			</Router>

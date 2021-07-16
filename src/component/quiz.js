@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import React, { useEffect } from "react";
+import React from "react";
 import Answer from "./answer";
 import title from "../data/title";
 import { css } from "@emotion/react";
